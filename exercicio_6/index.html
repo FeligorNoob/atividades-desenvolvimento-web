@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.style.css">
+    <script src="menuItems.js"></script>
+    <title>Exercício 5 - Jogos Multiplayer</title>
+</head>
+
+<body>
+<header>
+    <h1>Universo dos Jogos Multiplayer</h1>
+
+    <menu class="flex-row"></menu>
+</header>
+
+<div class="regiao_sumario position-absolute top-0 start-0 h-100">
+    <div class="sumario_flutuante position-absolute top-50 start-0 flex-column">
+        <a class="btn btn-outline-primary my-2" href="#introducao">Introdução</a>
+        <a class="btn btn-outline-primary my-2" href="#listas" class="col">Listas e Modos</a>
+        <a class="btn btn-outline-primary my-2" href="#estatisticas">Estatísticas (Tabelas)</a>
+        <a class="btn btn-outline-primary my-2" href="#cadastro">Cadastro de Jogador</a>
+    </div>
+</div>
+
+<div class="page-content">
+    <section>
+        <h2 id="introducao">1. Introdução aos Jogos em Rede</h2>
+        <p>
+            Os <b>jogos multiplayer</b> revolucionaram a indústria do entretenimento digital.
+            Diferente das experiências <i>single-player</i> convencionais, a modalidade multijogador
+            permite a <u>cooperação e competição em tempo real</u> entre jogadores do mundo inteiro.
+        </p>
+
+        <p>
+            Para garantir uma boa jogabilidade, aspectos como <b>latência (&lt; 50ms)</b>,
+            <b>taxa de quadros (&gt; 60 FPS)</b> e protocolos de rede robustos s&atilde;o indispens&aacute;veis.
+        </p>
+
+        <div class="card text-start">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=700&q=80"
+                 alt="Jogadores em um torneio de esports" />
+            <div class="card-body">
+                <p class="card-title">Competição de e-Sports em arena multiplayer.</p>
+            </div>
+        </div>
+        </center>
+    </section>
+
+    <section>
+        <h2 id="listas">2. Categorias, Rankings e Conceitos (Listas)</h2>
+
+        <h3>A. Principais Gêneros (Lista Não-Ordenada com TYPE)</h3>
+        <ul>
+            <li type="square"><b>MMORPG:</b> Massive Multiplayer Online Role-Playing Game (ex: <i>World of
+                Warcraft</i>)</li>
+            <li type="circle"><b>MOBA:</b> Multiplayer Online Battle Arena (ex: <i>League of Legends</i>, <i>Dota
+                2</i>)</li>
+            <li type="disc"><b>Battle Royale:</b> Sobrevivência em larga escala (ex: <i>Fortnite</i>, <i>Apex
+                Legends</i>)</li>
+            <li type="square"><b>FPS Tático:</b> Tiro em primeira pessoa com objetivos táticos (ex: <i>CS2</i>,
+                <i>Valorant</i>)
+            </li>
+        </ul>
+
+        <h3>B. Ranking de Plataformas Populares (Lista Ordenada - Padrão e START)</h3>
+        <ol>
+            <li>Computador (PC / Steam / Epic Games)</li>
+            <li>Consoles de Mesa (PlayStation / Xbox / Nintendo Switch)</li>
+            <li>Dispositivos Móveis (Android / iOS)</li>
+        </ol>
+
+        <p><b>Continuação de categorias complementares (iniciando em 4):</b></p>
+        <ol start="4">
+            <li>Nuvem (Cloud Gaming / GeForce NOW / Xbox Cloud)</li>
+            <li>Realidade Virtual (VR Multiplayer)</li>
+        </ol>
+
+        <h3>C. Tipos de Numeração / Marcadores (OL TYPE A, a, I, i)</h3>
+
+
+        <p><b>Etapas de uma Partida Competitiva (TYPE="A"):</b></p>
+        <ol type="A">
+            <li>Fase de Banimento e Escolha (Draft/Pick)</li>
+            <li>Fase Inicial de Posicionamento (Early Game)</li>
+            <li>Confrontos de Meio de Jogo (Mid Game)</li>
+            <li>Decisão Final e Encerramento (Late Game)</li>
+        </ol>
+
+        <p><b>Graus de Penalidade por Conduta (TYPE="I"):</b></p>
+        <ol type="I">
+            <li>Aviso em tela (Advertência)</li>
+            <li>Silenciamento temporário no chat</li>
+            <li>Suspensão temporária de filas ranqueadas</li>
+            <li>Banimento permanente da conta</li>
+        </ol>
+
+        <div class="card border-dark">
+            <div class="card-body">
+                <h4 class="card-title">D. Glossário Gamer (Lista de Definição - DL, DT, DD)</h4>
+                <p class="card-text">
+                <dl>
+                    <dt><b>Ping / Latência</b></dt>
+                    <dd>Tempo que um pacote de dados leva para ir do computador do jogador até o servidor do jogo e
+                        retornar.</dd>
+
+                    <dt><b>Matchmaking Rating (MMR)</b></dt>
+                    <dd>Algoritmo de pontuação interna utilizado para emparelhar jogadores com níveis de habilidade
+                        equivalentes.</dd>
+
+                    <dt><b>Hitbox</b></dt>
+                    <dd>Geometria invisível usada nos modelos 3D para detectar colisões e acertos de projéteis em
+                        tempo real.</dd>
+                </dl>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 id="estatisticas">3. Estatísticas e Infraestrutura de Servidores (Tabelas)</h2>
+
+        <p><b>Tabela 1: População de Jogadores Concorrentes por Região e Trimestre</b></p>
+        <table border="1" cellpadding="6" cellspacing="2" width="80%" bgcolor="#FFFFFF">
+            <tr bgcolor="#1B263B">
+                <th align="center">
+                    <font color="white">Região / Servidor</font>
+                </th>
+                <th align="center">
+                    <font color="white">Janeiro (k)</font>
+                </th>
+                <th align="center">
+                    <font color="white">Fevereiro (k)</font>
+                </th>
+                <th align="center">
+                    <font color="white">Março (k)</font>
+                </th>
+                <th align="center">
+                    <font color="white">Status</font>
+                </th>
+            </tr>
+            <tr align="center">
+                <td align="left">América Latina (São Paulo)</td>
+                <td>320</td>
+                <td>345</td>
+                <td>410</td>
+                <td bgcolor="#E8F8F5">
+                    <font color="#0E6251"><b>Estável</b></font>
+                </td>
+            </tr>
+            <tr align="center">
+                <td align="left">América do Norte (Virgínia)</td>
+                <td>850</td>
+                <td>890</td>
+                <td>940</td>
+                <td bgcolor="#E8F8F5">
+                    <font color="#0E6251"><b>Estável</b></font>
+                </td>
+            </tr>
+            <tr align="center">
+                <td align="left">Europa Ocidental (Frankfurt)</td>
+                <td>780</td>
+                <td>760</td>
+                <td>820</td>
+                <td bgcolor="#FEF9E7">
+                    <font color="#7D6608"><b>Manutenção</b></font>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <p><b>Tabela 2: Arquitetura de Servidores e Modos (Demonstração de Colspan e Rowspan)</b></p>
+        <table border="1" cellpadding="8" cellspacing="0" width="85%" bgcolor="#FFFFFF">
+            <tr bgcolor="#2E4057">
+                <th colspan="2" align="center">
+                    <font color="#FFFFFF">Infraestrutura e Tipo de Conexão</font>
+                </th>
+                <th align="center">
+                    <font color="#FFFFFF">Capacidade Máxima</font>
+                </th>
+                <th align="center">
+                    <font color="#FFFFFF">Latência Alvo</font>
+                </th>
+                <th align="center">
+                    <font color="#FFFFFF">Segurança Anti-Cheat</font>
+                </th>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center" valign="middle" bgcolor="#F2F4F7">
+                    <b>Servidores Dedicados</b>
+                </td>
+                <td align="left" valign="top">Sessão Competitiva (Tickrate 128)</td>
+                <td align="center" valign="middle">10 a 64 jogadores</td>
+                <td align="right" valign="bottom">&lt; 30 ms</td>
+                <td align="center" valign="middle">Lado do Servidor (Kernel)</td>
+            </tr>
+            <tr>
+                <td align="left" valign="top">Mundo Aberto / MMO</td>
+                <td align="center" valign="middle">Até 5.000 jogadores</td>
+                <td align="right" valign="bottom">&lt; 90 ms</td>
+                <td align="center" valign="middle">Autenticação Contínua</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="left" bgcolor="#EAEDED"><b>P2P (Peer-to-Peer / Hospedagem Local)</b></td>
+                <td align="center">2 a 8 jogadores</td>
+                <td align="right">&lt; 60 ms</td>
+                <td align="center">Assinatura de Pacotes</td>
+            </tr>
+            <tr align="center">
+                <td colspan="5" bgcolor="#F8F9F9">
+                    <font size="2"><i>Relatório consolidado pela equipe de engenharia de rede.</i></font>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+
+
+        <div class="card shadow" id="cadastrogit pull --rebase origin main
+">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0">4. Formulário de Recrutamento para Clã / Beta Tester</h2>
+            </div>
+
+            <div class="card-body">
+                <form action="#" method="POST" enctype="multipart/form-data">
+
+                    <!-- Nickname -->
+                    <div class="row mb-3">
+                        <label for="nickname" class="col-md-4 col-form-label fw-bold">
+                            Nickname / Tag:
+                        </label>
+
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="nickname" name="nickname" maxlength="20"
+                                   placeholder="Ex: ShadowStriker_BR" required>
+                        </div>
+                    </div>
+
+                    <!-- Senha -->
+                    <div class="row mb-3">
+                        <label for="senha" class="col-md-4 col-form-label fw-bold">
+                            Senha de Acesso:
+                        </label>
+
+                        <div class="col-md-8">
+                            <input type="password" class="form-control" id="senha" name="senha" required>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="row mb-3">
+                        <label for="email" class="col-md-4 col-form-label fw-bold">
+                            E-mail para Contato:
+                        </label>
+
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" id="email" name="email"
+                                   placeholder="jogador@exemplo.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Idade -->
+                    <div class="row mb-3">
+                        <label for="idade" class="col-md-4 col-form-label fw-bold">
+                            Idade:
+                        </label>
+
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="idade" name="idade" min="12" max="99"
+                                       value="18">
+                                <span class="input-group-text">anos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plataforma -->
+                    <div class="row mb-3">
+                        <label class="col-md-4 col-form-label fw-bold">
+                            Plataforma Principal:
+                        </label>
+
+                        <div class="col-md-8">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="plataforma" value="pc"
+                                       id="plat_pc" checked>
+                                <label class="form-check-label" for="plat_pc">
+                                    PC / Desktop
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="plataforma" value="console"
+                                       id="plat_console">
+                                <label class="form-check-label" for="plat_console">
+                                    Console (PS5 / Xbox / Switch)
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="plataforma" value="mobile"
+                                       id="plat_mobile">
+                                <label class="form-check-label" for="plat_mobile">
+                                    Mobile
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Funções -->
+                    <div class="row mb-3">
+                        <label class="col-md-4 col-form-label fw-bold">
+                            Funções no Time (Role):
+                        </label>
+
+                        <div class="col-md-8">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="funcao" value="tanque"
+                                       id="fn_tank">
+                                <label class="form-check-label" for="fn_tank">
+                                    Tanque / Defesa
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="funcao" value="dps"
+                                       id="fn_dps" checked>
+                                <label class="form-check-label" for="fn_dps">
+                                    DPS / Atirador / Dano
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="funcao" value="suporte"
+                                       id="fn_sup">
+                                <label class="form-check-label" for="fn_sup">
+                                    Suporte / Curador
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="funcao" value="igl"
+                                       id="fn_igl">
+                                <label class="form-check-label" for="fn_igl">
+                                    Líder Tático (IGL)
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Elo / Rank -->
+                    <div class="row mb-3">
+                        <label for="elo" class="col-md-4 col-form-label fw-bold">
+                            Elo / Rank Atual:
+                        </label>
+
+                        <div class="col-md-8">
+                            <select class="form-select" name="elo" id="elo">
+                                <option value="bronze">
+                                    Bronze / Iniciante
+                                </option>
+
+                                <option value="prata">
+                                    Prata
+                                </option>
+
+                                <option value="ouro">
+                                    Ouro
+                                </option>
+
+                                <option value="platina" selected>
+                                    Platina
+                                </option>
+
+                                <option value="diamante">
+                                    Diamante
+                                </option>
+
+                                <option value="mestre">
+                                    Mestre / Desafiante
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Screenshot -->
+                    <div class="row mb-3">
+                        <label for="comprovante_rank" class="col-md-4 col-form-label fw-bold">
+                            Screenshot do Perfil / Histórico:
+                        </label>
+
+                        <div class="col-md-8">
+                            <input type="file" class="form-control" name="comprovante_rank" id="comprovante_rank">
+                        </div>
+                    </div>
+
+                    <!-- Cor -->
+                    <div class="row mb-3">
+                        <label for="cor_emblema" class="col-md-4 col-form-label fw-bold">
+                            Cor do Emblema do Clã:
+                        </label>
+
+                        <div class="col-md-8">
+                            <input type="color" class="form-control form-control-color" name="cor_emblema"
+                                   id="cor_emblema" value="#0055FF" title="Escolha a cor do emblema">
+                        </div>
+                    </div>
+
+                    <!-- Biografia -->
+                    <div class="row mb-3">
+                        <label for="biografia" class="col-md-4 col-form-label fw-bold">
+                            Apresentação / Motivação:
+                        </label>
+
+                        <div class="col-md-8">
+                                <textarea class="form-control" name="biografia" id="biografia" rows="4"
+                                          placeholder="Conte brevemente sobre seu histórico de jogos em equipe e horários disponíveis..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Termos -->
+                    <div class="row mb-4">
+                        <div class="col-md-8 offset-md-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="termos" id="chk_termos"
+                                       required>
+
+                                <label class="form-check-label" for="chk_termos">
+                                    Concordo com as regras de conduta anti-toxicidade.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4">
+
+                            <button type="submit" class="btn btn-primary">
+                                Enviar Inscrição
+                            </button>
+
+                            <button type="reset" class="btn btn-outline-secondary ms-2">
+                                Limpar Campos
+                            </button>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            Exercício 1 &copy; 2026 - Desenvolvimento Web - Tema: <b>Jogos Multiplayer</b>
+        </p>
+        <a href="#introducao" class="btn btn-outline-primary">
+            Voltar ao topo da pagina
+        </a>
+
+    </footer>
+</div>
+
+<script>
+    var menu = document.querySelector("menu");
+    menuItems.forEach(item => {
+        var itemEl = document.createElement("div");
+        itemEl.onclick = () => {
+            document.open('./pages/exercicio_1.html')
+        }
+        var textEl = document.createTextNode(item.name);
+        itemEl.appendChild(textEl);
+        menu.appendChild(itemEl);
+    })
+</script>
+
+</body>
+
+</html>
