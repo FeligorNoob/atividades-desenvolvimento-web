@@ -1,5 +1,5 @@
 H1 {
-    font-family: Arial;
+    font-family: Agency FB;
     font-size: xx-large;
     font-weight: bold;
     color: #ffffff;
@@ -12,7 +12,7 @@ H1 {
 }
 
 H2 {
-    font-family: Arial;
+    font-family: "Curlz MT";
     font-size: x-large;
     font-weight: bold;
     color: #0d0d0d;
@@ -101,6 +101,8 @@ TH {
     background: #FFFF00;
     text-align: center;
     position: relative;
+    border-color: black;
+    border-style: solid;
 }
 
 PRE {
@@ -124,6 +126,16 @@ PRE {
 
 .highlight {
     background-color: #FFFF00;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.highlitable-text:hover {
+    &:not(.ufo) {
+        background-color: #FFFF00;
+    }
+    padding: 16px;
+    border-radius: 16px;
 }
 
 .ufo {
@@ -131,4 +143,5 @@ PRE {
     font-size: large;
     color: #00FF00;
     background-color: #000000;
+    transform: translate3d(10px, 10px, 2px);
 }
