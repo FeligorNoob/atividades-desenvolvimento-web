@@ -1,5 +1,5 @@
 .regiao_sumario {
-    min-width: 50px;
+    min-width: 100px;
 
     &:hover .sumario_flutuante {
         display: flex;

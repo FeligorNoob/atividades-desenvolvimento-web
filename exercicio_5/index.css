@@ -30,10 +30,11 @@ body:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.body-max {
-    max-width: 800px;
+    section {
+        max-width: 800px;
+        padding: 32px;
+    }
 }
 
 header {
