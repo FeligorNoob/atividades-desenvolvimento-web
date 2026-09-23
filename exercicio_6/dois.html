@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+</head>
+<body>
+
+    <h1>Cadastro</h1>
+
+    <form onsubmit="return validarFormulario()">
+
+        <label>Nome:</label>
+        <input type="text" id="nome">
+        <br><br>
+
+        <label>E-mail:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Telefone:</label>
+        <input type="text" id="telefone">
+        <br><br>
+
+        <label>Cidade:</label>
+        <input type="text" id="cidade">
+        <br><br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <script>
+        function validarFormulario() {
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var telefone = document.getElementById("telefone").value;
+            var cidade = document.getElementById("cidade").value;
+
+            if (nome == "" || email == "" ||
+                telefone == "" || cidade == "") {
+
+                alert("Erro: preencha todos os campos obrigatórios!");
+
+                return false;
+            }
+
+            alert("Sucesso!");
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

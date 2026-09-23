@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+</head>
+<body>
+
+    <h1>Alterar letras</h1>
+
+    <form>
+        <label>Nome:</label>
+        <input type="text" id="nome">
+        <br><br>
+
+        <label>Cidade:</label>
+        <input type="text" id="cidade">
+        <br><br>
+
+        <label>Curso:</label>
+        <input type="text" id="curso">
+        <br><br>
+
+        <input type="checkbox" id="maiusculas"
+               onchange="alterarTexto()">
+        <label>Maiúsculas</label>
+
+        <input type="checkbox" id="minusculas"
+               onchange="alterarTexto()">
+        <label>Minúsculas</label>
+    </form>
+
+    <script>
+        function alterarTexto() {
+            var nome = document.getElementById("nome");
+            var cidade = document.getElementById("cidade");
+            var curso = document.getElementById("curso");
+
+            if (document.getElementById("maiusculas").checked) {
+                nome.value = nome.value.toUpperCase();
+                cidade.value = cidade.value.toUpperCase();
+                curso.value = curso.value.toUpperCase();
+            }
+
+            if (document.getElementById("minusculas").checked) {
+                nome.value = nome.value.toLowerCase();
+                cidade.value = cidade.value.toLowerCase();
+                curso.value = curso.value.toLowerCase();
+            }
+        }
+    </script>
+
+</body>
+</html>

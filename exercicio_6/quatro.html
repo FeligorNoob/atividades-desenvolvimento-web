@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+</head>
+<body>
+
+    <h1>Calculadora de média</h1>
+
+    <label>Nota 1:</label>
+    <input type="number" id="nota1">
+    <br><br>
+
+    <label>Nota 2:</label>
+    <input type="number" id="nota2">
+    <br><br>
+
+    <label>Nota 3:</label>
+    <input type="number" id="nota3">
+    <br><br>
+
+    <button onclick="calcularMedia()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMedia() {
+            var nota1 = Number(document.getElementById("nota1").value);
+            var nota2 = Number(document.getElementById("nota2").value);
+            var nota3 = Number(document.getElementById("nota3").value);
+
+            var media = (nota1 + nota2 + nota3) / 3;
+
+            if (media >= 7) {
+                document.getElementById("resultado").innerHTML =
+                    "Média: " + media.toFixed(2) +
+                    "<br>Aluno aprovado!";
+            } else {
+                document.getElementById("resultado").innerHTML =
+                    "Média: " + media.toFixed(2) +
+                    "<br>Aluno reprovado!";
+            }
+        }
+    </script>
+
+</body>
+</html>
